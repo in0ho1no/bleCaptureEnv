@@ -14,9 +14,9 @@ export_on_save:
 
 ### 現在利用中のドングル
 
-現在はTexas Instruments(TI (テキサス・インスツルメンツ))社のUSBドングルを利用している。
-
-https://www.ti.com/tool/ja-jp/CC2540EMK-USB
+現在はTexas Instruments(TI (テキサス・インスツルメンツ))社の
+[USBドングル](https://www.ti.com/tool/ja-jp/CC2540EMK-USB)
+を利用している。
 
 ![cc2540 image](img/image.png)
 
