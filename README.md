@@ -22,7 +22,7 @@ export_on_save:
 
 このドングルは専用のツールを利用するため、比較的直観的に利用しやすいのがメリットである。
 
-![alt text](img/image-1.png)
+![packet sniffer image](img/image-1.png)
 
 その反面、以下のようなデメリットが存在する。
 
@@ -32,3 +32,17 @@ export_on_save:
 - パケットが著しく欠損することがある
 
 従って、代替となるドングルを検討・用意する。
+
+### 代替利用するドングル
+
+## Wiresharkでの解析
+
+### 代表的なフィルタ
+
+Device欄でGATT通信を補足したいアドレスを指定する。
+
+目的 | フィルタ | 補足
+--- | --- | ---
+チャネルでフィルタリングする | nordic_ble.channel | 例: 37
+アドバタイズパケットをアドレスでフィルタリングする | btle.advertising_address | none
+pdu_typeでフィルタリングする | btle.advertising_header.pdu_type | 例: 0x05: ADV_CONNECT_REQ
