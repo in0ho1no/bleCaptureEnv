@@ -214,25 +214,42 @@ FWの書き換えやパケットキャプチャに必要となるツールの準
 
 ### UF2ファイルの準備
 
-binファイルからuf2ファイルを作成する
+USB経由でFW書き込みするにはUF2ファイルを利用する必要があるため、binファイルからuf2ファイルへ変換する。  
 
-1. uf2の[githubページ](https://github.com/microsoft/uf2)からプロジェクト全体をクローンしておく  
+1. uf2の[githubページ](https://github.com/microsoft/uf2)からプロジェクト全体をクローンする。  
+
+        例: "C:\tools\uf2-master\"
+
 1. 端末(CMDやWindowsTerminalなど)からプロジェクトを開き、uf2conv.pyの配置されているフォルダをカレントディレクトリとしておく
-1. [Adafruit nRF52 Bootloader](https://github.com/adafruit/Adafruit_nRF52_Bootloader?tab=readme-ov-file#making-your-own-uf2)で紹介されている以下のコマンドを参考にする。  
+
+        例: cd C:\tools\uf2-master\utils
+
+1. binからuf2への変換を行う  
+[Adafruit nRF52 Bootloader](https://github.com/adafruit/Adafruit_nRF52_Bootloader?tab=readme-ov-file#making-your-own-uf2)で紹介されている以下のコマンドを参考にする。  
 
         nRF52840
         uf2conv.py firmware.bin -c -b 0x26000 -f 0xADA52840
 
-1. 今回の手順では以下コマンドを実行することになる。  
+    今回の手順では以下コマンドを実行することになる。  
 
         python uf2conv.py "C:\Users\kome\.nrfutil\share\nrfutil-ble-sniffer\firmware\sniffer_nrf52840dongle_nrf52840_4.1.1\sniffer_nrf52840dongle_nrf52840_4.1.1.bin" -c -b 0x26000 -f 0xADA52840
+
+1. 以下ファイルが出力されていれば成功
+
+        例: cd C:\tools\uf2-master\utils\flash.uf2
 
 ### 作成したFWを書き込む
 
 1. seeed XIAO-nrf52840をPCに接続する。  
 1. RSTボタン(Type-Cコネクタの左側)を素早く2回押す。  
-1. `XIAO-SENSE`というデバイス名でPC上にウィンドウが表示されるか、ファイルエクスプローラーからアクセスできるようになる。  
+![rst XIAO-nrf52840 image](img/20_uf2/00.png)
+1. `XIAO-SENSE`というデバイス名でファイルエクスプローラーからアクセスできるようになる。  
+![rst XIAO-nrf52840 image](img/20_uf2/01.png)
 1. `XIAO-SENSE`を表示したウィンドウに、作成したuf2ファイルをドラッグアンドドロップする。  
+uf2の書き込みに不慣れだと違和感を覚えるかもしれないが、ドラッグアンドドロップにより書き込みが行われ、問題なければウィンドウが自動で閉じる。  
+書き込み先の3ファイルは特に気にしなくていい。  
+
+![rst XIAO-nrf52840 image](img/20_uf2/02.png)
 
 ## Wiresharkでの解析
 
