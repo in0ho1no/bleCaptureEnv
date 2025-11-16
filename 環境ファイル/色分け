@@ -1,4 +1,7 @@
 # This file was created by Wireshark. Edit with care.
+@Gatt_Comm_Rcv@btatt.value[3] == 0x05@[65535,43690,65535][0,0,0]
+@Gatt_Comm_Peri@btatt.handle == 0x0019@[65535,65535,65535][0,21845,0]
+@Gatt_Comm_Cent@btatt.handle == 0x0017@[65535,65535,65535][43690,0,0]
+@Gatt_Comm@btatt@[65535,43690,32639][0,0,0]
+@Adv@btle && !(btatt)@[0,65535,32639][0,0,0]
 @CONNECT_IND@btle.advertising_header.pdu_type == 0x05@[65535,65535,0][0,0,0]
-@GATT以外@btle && !(btatt)@[0,65535,32639][0,0,0]
-@GATT comm@btatt@[65535,43690,32639][0,0,0]
