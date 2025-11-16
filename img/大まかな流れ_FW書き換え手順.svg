@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="560" style="background-color: #FFFFFF">
+<rect x="0" y="0" width="520" height="560" fill="#FFFFFF" stroke="#FFFFFF"/>
+<text x="21" y="30" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="18px">Name: FW書き換え手順</text>
+
+<circle cx="30" cy="90" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="49" y="90" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">FW書き換えの大まかな流れ</text>
+
+<line x1="30" y1="72" x2="30" y2="81" stroke="#000000"/>
+<line x1="21" y1="72" x2="39" y2="72" stroke="#000000"/>
+
+<line x1="30" y1="99" x2="30" y2="108" stroke="#000000"/>
+<line x1="21" y1="108" x2="39" y2="108" stroke="#000000"/>
+
+<circle cx="60" cy="120" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="79" y="120" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">Wiresharkを用意</text>
+
+<line x1="60" y1="102" x2="60" y2="111" stroke="#000000"/>
+<line x1="42" y1="102" x2="60" y2="102" stroke="#000000"/>
+<line x1="42" y1="84" x2="42" y2="102" stroke="#000000"/>
+
+<circle cx="90" cy="150" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="109" y="150" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">本体のインストール(過去にインストール済みならスキップ可能)</text>
+
+<line x1="90" y1="132" x2="90" y2="141" stroke="#000000"/>
+<line x1="72" y1="132" x2="90" y2="132" stroke="#000000"/>
+<line x1="72" y1="114" x2="72" y2="132" stroke="#000000"/>
+
+<circle cx="90" cy="180" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="109" y="180" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">extcapフォルダの用意</text>
+
+<line x1="90" y1="159" x2="90" y2="171" stroke="#000000"/>
+
+<line x1="90" y1="189" x2="90" y2="198" stroke="#000000"/>
+<line x1="81" y1="198" x2="99" y2="198" stroke="#000000"/>
+
+<circle cx="60" cy="210" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="79" y="210" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">nRF Utilを用意</text>
+
+<line x1="60" y1="129" x2="60" y2="201" stroke="#000000"/>
+
+<circle cx="90" cy="240" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="109" y="240" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">deviceモジュールを用意(FW書き換え成否を確認できるようにしておく為)</text>
+
+<line x1="90" y1="222" x2="90" y2="231" stroke="#000000"/>
+<line x1="72" y1="222" x2="90" y2="222" stroke="#000000"/>
+<line x1="72" y1="204" x2="72" y2="222" stroke="#000000"/>
+
+<circle cx="90" cy="270" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="109" y="270" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">ble-snifferモジュールを用意(バイナリファイルを用意する為)</text>
+
+<line x1="90" y1="249" x2="90" y2="261" stroke="#000000"/>
+
+<circle cx="90" cy="300" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="109" y="300" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">Wireshark用の設定ファイル用意</text>
+
+<line x1="90" y1="279" x2="90" y2="291" stroke="#000000"/>
+
+<line x1="90" y1="309" x2="90" y2="318" stroke="#000000"/>
+<line x1="81" y1="318" x2="99" y2="318" stroke="#000000"/>
+
+<circle cx="60" cy="330" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="79" y="330" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">Python環境を用意</text>
+
+<line x1="60" y1="219" x2="60" y2="321" stroke="#000000"/>
+
+<circle cx="90" cy="360" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="109" y="360" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">Python本体をインストール(過去にインストール済みならスキップ可能)</text>
+
+<line x1="90" y1="369" x2="90" y2="378" stroke="#000000"/>
+<line x1="81" y1="378" x2="99" y2="378" stroke="#000000"/>
+
+<line x1="90" y1="342" x2="90" y2="351" stroke="#000000"/>
+<line x1="72" y1="342" x2="90" y2="342" stroke="#000000"/>
+<line x1="72" y1="324" x2="72" y2="342" stroke="#000000"/>
+
+<circle cx="60" cy="390" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="79" y="390" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">UF2ファイルを用意</text>
+
+<line x1="60" y1="339" x2="60" y2="381" stroke="#000000"/>
+
+<circle cx="90" cy="420" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="109" y="420" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">変換用プロジェクトをgithubからクローン</text>
+
+<line x1="90" y1="402" x2="90" y2="411" stroke="#000000"/>
+<line x1="72" y1="402" x2="90" y2="402" stroke="#000000"/>
+<line x1="72" y1="384" x2="72" y2="402" stroke="#000000"/>
+
+<circle cx="90" cy="450" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="109" y="450" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">binファイルからuf2ファイルへ変換する</text>
+
+<line x1="90" y1="429" x2="90" y2="441" stroke="#000000"/>
+
+<line x1="90" y1="459" x2="90" y2="468" stroke="#000000"/>
+<line x1="81" y1="468" x2="99" y2="468" stroke="#000000"/>
+
+<circle cx="60" cy="480" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="79" y="480" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">UF2ファイルを書き込む</text>
+
+<line x1="60" y1="399" x2="60" y2="471" stroke="#000000"/>
+
+<line x1="60" y1="489" x2="60" y2="498" stroke="#000000"/>
+<line x1="51" y1="498" x2="69" y2="498" stroke="#000000"/>
+
+<circle cx="90" cy="510" r="9" fill="#FFFFFF" stroke="#000000"/>
+<text x="109" y="510" text-anchor="start" dominant-baseline="middle" font-family="Consolas, Courier New, monospace" font-size="12px">seeed XIAO-nrf52840に作成したUF2を書き込む</text>
+
+<line x1="90" y1="519" x2="90" y2="528" stroke="#000000"/>
+<line x1="81" y1="528" x2="99" y2="528" stroke="#000000"/>
+
+<line x1="90" y1="492" x2="90" y2="501" stroke="#000000"/>
+<line x1="72" y1="492" x2="90" y2="492" stroke="#000000"/>
+<line x1="72" y1="474" x2="72" y2="492" stroke="#000000"/>
+
+</svg>
