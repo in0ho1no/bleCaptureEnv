@@ -240,6 +240,40 @@ USB経由でFW書き込みするにはUF2ファイルを利用する必要があ
 
         例: cd C:\tools\uf2-master\utils\flash.uf2
 
+### UF2ファイルの確認
+
+以下コマンドを使って、ハッシュ値を確認しておく。
+
+certutil -hashfile <ファイルパス> <ハッシュアルゴリズム>
+
+以下利用できる。
+
+- MD2
+- MD4
+- MD5
+- SHA1
+- SHA256
+- SHA384
+- SHA512
+
+今回はMD5とSHA256を記録しておく。
+
+MD5での実行結果を以下に示す。
+
+        PS C:\Users\kome> certutil -hashfile "D:\flash.uf2" MD5
+        MD5 ハッシュ (対象 D:\flash.uf2):
+        d05835d8cd4ca31950e2a7d4becef079
+        CertUtil: -hashfile コマンドは正常に完了しました。
+        PS C:\Users\kome>
+
+SHA256での実行結果を以下に示す。
+
+        PS C:\Users\kome> certutil -hashfile "D:\flash.uf2" SHA256
+        SHA256 ハッシュ (対象 D:\flash.uf2):
+        bb8f0a497a298e1710c4a8fe3a3dca11f41dd74b3f1b8c8daef9e84f83c43277
+        CertUtil: -hashfile コマンドは正常に完了しました。
+        PS C:\Users\kome>
+
 ### 作成したFWを書き込む
 
 1. seeed XIAO-nrf52840をPCに接続する。  
