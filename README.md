@@ -278,14 +278,14 @@ SHA256での実行結果を以下に示す。
 
 変換元ファイルの確認結果も残しておく
 
-        PS C:\Users\kome> certutil -hashfile "C:\Users\seigy\.nrfutil\share\nrfutil-ble-sniffer\firmware\sniffer_nrf52840dongle_nrf52840_4.1.1\sniffer_nrf52840dongle_nrf52840_4.1.1.bin" MD5
-        MD5 ハッシュ (対象 C:\Users\seigy\.nrfutil\share\nrfutil-ble-sniffer\firmware\sniffer_nrf52840dongle_nrf52840_4.1.1\sniffer_nrf52840dongle_nrf52840_4.1.1.bin):
+        PS C:\Users\kome> certutil -hashfile "C:\Users\kome\.nrfutil\share\nrfutil-ble-sniffer\firmware\sniffer_nrf52840dongle_nrf52840_4.1.1\sniffer_nrf52840dongle_nrf52840_4.1.1.bin" MD5
+        MD5 ハッシュ (対象 C:\Users\kome\.nrfutil\share\nrfutil-ble-sniffer\firmware\sniffer_nrf52840dongle_nrf52840_4.1.1\sniffer_nrf52840dongle_nrf52840_4.1.1.bin):
         ad071e0b850ddaa4299b397b53cb4927
         CertUtil: -hashfile コマンドは正常に完了しました。
         PS C:\Users\kome> 
 
-        PS C:\Users\kome> certutil -hashfile "C:\Users\seigy\.nrfutil\share\nrfutil-ble-sniffer\firmware\sniffer_nrf52840dongle_nrf52840_4.1.1\sniffer_nrf52840dongle_nrf52840_4.1.1.bin" SHA256
-        SHA256 ハッシュ (対象 C:\Users\seigy\.nrfutil\share\nrfutil-ble-sniffer\firmware\sniffer_nrf52840dongle_nrf52840_4.1.1\sniffer_nrf52840dongle_nrf52840_4.1.1.bin):
+        PS C:\Users\kome> certutil -hashfile "C:\Users\kome\.nrfutil\share\nrfutil-ble-sniffer\firmware\sniffer_nrf52840dongle_nrf52840_4.1.1\sniffer_nrf52840dongle_nrf52840_4.1.1.bin" SHA256
+        SHA256 ハッシュ (対象 C:\Users\kome\.nrfutil\share\nrfutil-ble-sniffer\firmware\sniffer_nrf52840dongle_nrf52840_4.1.1\sniffer_nrf52840dongle_nrf52840_4.1.1.bin):
         51e557ba329232c66ca7420279cb16354b842d6ac2ea66ceb8f1b99f7a396905
         CertUtil: -hashfile コマンドは正常に完了しました。
         PS C:\Users\kome> 
