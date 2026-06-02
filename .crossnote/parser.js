@@ -3,6 +3,7 @@
   // https://shd101wyy.github.io/markdown-preview-enhanced/#/extend-parser
 
   onWillParseMarkdown: async function(markdown) {
+    // Markdown 生テキストを前処理したい場合のフック。
     return markdown;
   },
 
@@ -34,6 +35,16 @@
       (whole, content) => `
         \<p id="info"\>
         🔍Info<br>
+        ${content}
+        \<\/p\>
+      `,
+    );
+
+    html_ = html_.replace(
+      /:::[sS][oO][uU][rR][cC][eE]([\w\W]+?):::/g,
+      (whole, content) => `
+        \<p id="source"\>
+        📚Source<br>
         ${content}
         \<\/p\>
       `,
