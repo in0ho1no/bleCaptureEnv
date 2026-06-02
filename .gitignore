@@ -17,3 +17,5 @@ Desktop.ini
 
 /temporary/*
 !/temporary/.gitkeep
+
+flash.uf2
